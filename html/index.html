@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Siyanda Nducushe | Portfolio</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+ 
+  <section class="landing" id="home">
+    <div class="landing-content">
+      <h1>Siyanda Nducushe</h1>
+      <p>New Dev. Eager Learner. Big Dreamer.</p>
+      <a href="#main-content" class="btn enter-btn">Enter</a>
+    </div>
+  </section>
+
+ 
+  <main id="main-content" style="display: none;">
+    <header>
+      <h1>Hi, I'm Siyanda Nducushe</h1>
+      <p>Software Developer | Tech Explorer | Lifelong Learner</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#learning">Learning</a></li>
+        <li><a href="#funfacts">Fun Facts</a></li>
+        <li><a href="#goals">Goals</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    
+    <section id="about">
+      <div class="card">
+        <h2>About Me</h2>
+        <p>
+          Hey there! I’m <strong>Siyanda Nducushe</strong> — a curious and ambitious software developer at the start of my tech journey. While I’m still new to the field, I bring a ton of passion, dedication, and a deep hunger to learn.
+          <span id="dots">...</span>
+          <span id="more" style="display: none;">
+            I’ve dived into Java, Python, HTML, and JavaScript, and I’m learning the ropes of object-oriented programming, data structures, and full-stack web development. Whether it’s a team project, a hackathon, or just experimenting with new ideas, I’m always ready to learn and build. Let’s connect and create something awesome together!
+          </span>
+        </p>
+        <button onclick="toggleReadMore()" class="btn pastel">Read more</button>
+      </div>
+    </section>
+
+
+    <section id="skills">
+      <div class="card">
+        <h2>💻 Skills</h2>
+        <ul>
+          <li>Java</li>
+          <li>Python</li>
+          <li>HTML & CSS</li>
+          <li>JavaScript (basic)</li>
+          <li>Object-Oriented Programming</li>
+        </ul>
+      </div>
+    </section>
+
+
+    <section id="learning">
+      <div class="card">
+        <h2>📚 Currently Learning</h2>
+        <p>I’m currently exploring:</p>
+        <ul>
+          <li>Web Development (Frontend & Backend)</li>
+          <li>Git & Version Control</li>
+          <li>APIs & HTTP Requests</li>
+          <li>Building fun side projects with HTML/CSS/JS</li>
+        </ul>
+      </div>
+    </section>
+
+   
+    <section id="funfacts">
+      <div class="card">
+        <h2>🧠 Fun Facts</h2>
+        <ul>
+            <li>I’m a curious creative with a soft spot for tech and design.</li>
+          <li>Music is my favorite fuel when I’m coding or brainstorming.</li>
+          <li>I love organizing chaos – whether it's a messy codebase or my workspace.</li>
+       
+        </ul>
+      </div>
+    </section>
+
+    <!-- Goals Section -->
+    <section id="goals">
+      <div class="card">
+        <h2>🎯 My Goals</h2>
+        <ul>
+          <li>Build real-world projects that solve problems</li>
+          <li>Collaborate with other developers</li>
+          <li>Join hackathons and coding challenges</li>
+          <li>Contribute to open-source</li>
+          <li>Land my first developer role!</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="card">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:siyandanducushe22@gmail.com">siyandanducushe22@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/siyanda-bot" target="_blank">github.com/siyanda-bot</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/siyanda-nducushe-7642a62aa/" target="_blank">linkedin.com/in/siyanda-nducushe</a></p>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Siyanda Nducushe 🚀</p>
+    </footer>
+  </main>
+
+ 
+  <script>
+    document.querySelector('.enter-btn').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('main-content').style.display = 'block';
+      document.querySelector('.landing').style.display = 'none';
+    });
+
+    function toggleReadMore() {
+      const dots = document.getElementById('dots');
+      const moreText = document.getElementById('more');
+      const btnText = document.querySelector('.btn.pastel');
+
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        moreText.style.display = "none";
+        btnText.textContent = "Read more";
+      } else {
+        dots.style.display = "none";
+        moreText.style.display = "inline";
+        btnText.textContent = "Read less";
+      }
+    }
+  </script>
+</body>
+</html>

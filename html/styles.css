@@ -1,0 +1,164 @@
+:root {
+  --primary: #cce5ff;
+  --secondary: #99ccff;
+  --accent: #6699cc;
+  --text-dark: #1e3a5f;
+  --text-light: #ffffff;
+  --background: #e6f2ff;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+
+.landing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.landing-content {
+  max-width: 600px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+.landing-content h1 {
+  font-size: 3rem;
+  color: #1a1a1a;
+}
+
+.landing-content p {
+  font-size: 1.3rem;
+  margin: 1rem 0;
+  color: #2b2b2b;
+}
+
+.landing .btn {
+  padding: 0.8rem 1.5rem;
+  background: var(--accent);
+  color: var(--text-light);
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.landing .btn:hover {
+  transform: scale(1.1);
+}
+
+
+nav {
+  background: var(--secondary);
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: var(--text-dark);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+
+section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  box-shadow: 0 4px 10px var(--shadow);
+  border-radius: 12px;
+  animation: fadeInUp 0.6s ease;
+}
+
+.card {
+  background: var(--accent);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px var(--shadow);
+  margin-top: 1rem;
+}
+
+.card p, .card a, .card li {
+  color: var(--text-light);
+}
+
+.btn.pastel {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--secondary);
+  color: var(--text-dark);
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn.pastel:hover {
+  background: var(--primary);
+}
+
+
+footer {
+  text-align: center;
+  padding: 1.2rem;
+  margin-top: 2rem;
+  background: var(--secondary);
+  color: var(--text-dark);
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+@media (max-width: 768px) {
+  .landing-content h1 {
+    font-size: 2rem;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 0.5rem 0;
+  }
+}
